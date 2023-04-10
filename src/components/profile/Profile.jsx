@@ -1,30 +1,21 @@
+import { ProfileCard } from "components/ProfileCard/ProfileCard";
+import { ProfileStats } from "components/ProfileStats/ProfileStats";
+import { Wrapper } from "./Profile.styled";
+
 export const Profile = ({ userProfile: {avatar, username, tag, location, stats: {followers, views, likes}} }) => {
     return (
-        <div>
-            <div>
-                <img
-                src={avatar}
-                alt="User avatar"
-                />
-                <p>{username}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
-            </div>
-
-            <ul>
-                <li>
-                <span>Followers</span>
-                <span>{followers}</span>
-                </li>
-                <li>
-                <span>Views</span>
-                <span>{views}</span>
-                </li>
-                <li>
-                <span>Likes</span>
-                <span>{likes}</span>
-                </li>
-            </ul>
-        </div>
+        <Wrapper>
+            <ProfileCard 
+                avatar = {avatar} 
+                username = {username} 
+                tag = {tag} 
+                location = {location}
+            />            
+            <ProfileStats 
+                followers = {followers} 
+                views = {views} 
+                likes = {likes}
+            />
+        </Wrapper>
     );
-}
+};
