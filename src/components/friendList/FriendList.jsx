@@ -1,11 +1,12 @@
+import { Wrapper } from "./FriendList.styled";
 import { FriendListItem } from "./FriendListItem";
 
 export const FriendList = ({ friends }) => {
     return (
-        <ul>
+        <Wrapper>
             {friends.map(friend => (
-                <FriendListItem friend = { friend }/>
+                <FriendListItem key={friend.id} friend = { friend }/>
             ))}
-        </ul>
+        </Wrapper>
     );
 };

@@ -1,12 +1,18 @@
+import { Percentage, StatItem, StatList, Title, Wrapper } from "./Statistics.styled";
+
 export const Statistics = ({ stats }) => {
     return (
-        <ul>
-            {stats.map(data => (
-                <li key={data.id}>
-                    <span>{data.label}</span>
-                    <span>{data.percentage}%</span>
-                </li>
-            ))}
-        </ul>
+        <Wrapper>
+            <Title>UPLOAD STATS</Title>
+
+            <StatList>
+                {stats.map(data => (
+                    <StatItem key={data.id}>
+                        <span>{data.label}</span>
+                        <Percentage>{data.percentage}%</Percentage>
+                    </StatItem>
+                ))}
+            </StatList>
+        </Wrapper>
     );
 };

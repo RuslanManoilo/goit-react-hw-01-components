@@ -9,6 +9,8 @@ const theme = {
     black: "black",
     gray: "gray",
     white: "white",
+    green: "green",
+    red: "red",
     accent: "tomato",
   },
 };
