@@ -2,7 +2,7 @@ import { ProfileCard } from "components/ProfileCard/ProfileCard";
 import { ProfileStats } from "components/ProfileStats/ProfileStats";
 import { Wrapper } from "./Profile.styled";
 
-export const Profile = ({ userProfile: {avatar, username, tag, location, stats: {followers, views, likes}} }) => {
+export const UserProfile = ({ userProfile: {avatar, username, tag, location, stats: {followers, views, likes}} }) => {
     return (
         <Wrapper>
             <ProfileCard 

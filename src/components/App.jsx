@@ -1,4 +1,4 @@
-import { Profile } from './Profile/Profile';
+import { UserProfile } from './Profile/UserProfile';
 import user from '../components/Profile/user.json';
 
 import { Statistics } from "./Statistics/Statistics";
@@ -14,7 +14,7 @@ import transactions from '../components/TransactionHistory/transactions.json';
 export const App = () => {
   return (
     <div>
-      <Profile userProfile= { user } />
+      <UserProfile userProfile= { user } />
       <Statistics stats = { data } />
       <FriendList friends = { friends }/>
       <TransactionHistory items = { transactions } />
