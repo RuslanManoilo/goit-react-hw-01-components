@@ -16,7 +16,7 @@ export const Status = styled.span`
     border-radius: 50%;
 
     background-color: ${(props) => {
-        return props.online ? props.theme.colors.red : props.theme.colors.green;
+        return props.online ? props.theme.colors.green : props.theme.colors.red;
     }};
 `;
 
