@@ -4,7 +4,7 @@ import { Percentage, StatItem, StatList, Title, Wrapper } from "./Statistics.sty
 export const Statistics = ({ title, stats }) => {
     return (
         <Wrapper>
-            <Title>{ title }</Title>
+            {title && <Title>{ title }</Title>}
 
             <StatList>
                 {stats.map(data => (
