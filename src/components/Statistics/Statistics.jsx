@@ -1,9 +1,10 @@
+import PropTypes from "prop-types";
 import { Percentage, StatItem, StatList, Title, Wrapper } from "./Statistics.styled";
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ title, stats }) => {
     return (
         <Wrapper>
-            <Title>UPLOAD STATS</Title>
+            <Title>{ title }</Title>
 
             <StatList>
                 {stats.map(data => (
@@ -15,4 +16,15 @@ export const Statistics = ({ stats }) => {
             </StatList>
         </Wrapper>
     );
+};
+
+
+Statistics.propTypes = {
+    stats: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
+        }),
+    ),
 };

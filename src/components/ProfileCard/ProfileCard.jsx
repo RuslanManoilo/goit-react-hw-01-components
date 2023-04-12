@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Avatar, Location, Name, Tag, Wrapper } from "./ProfileCard.styled";
 
 export const ProfileCard = ({avatar, username, tag, location}) => {
@@ -12,4 +13,12 @@ export const ProfileCard = ({avatar, username, tag, location}) => {
             <Location>{location}</Location>
         </Wrapper> 
     );
+};
+
+
+ProfileCard.propTypes = {
+    username: PropTypes.string,
+    avatar: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
 };

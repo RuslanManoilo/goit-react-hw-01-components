@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { BlockStats, Quantity, StatsLabel } from "./ProfileStats.styled";
 
 export const ProfileStats = ({followers, views, likes}) => {
@@ -17,4 +18,11 @@ export const ProfileStats = ({followers, views, likes}) => {
             </StatsLabel>
         </BlockStats> 
     );
+};
+
+
+ProfileStats.propType = {
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
 };
